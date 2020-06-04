@@ -110,7 +110,7 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="menu1.html" onclick="load_iotavail();"><i class="fa fa-television fa-fw"></i> Menu 1<span class="fa arrow"></span></a>
+                            <a href="menu1.html" onclick="menu1();"><i class="fa fa-list-ul fa-fw"></i> Menu 1<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
                                 <li>
                                     <a href="sub_menu1.html"><i class="fa fa-tablet fa-fw"></i> Sub Menu 1<span class="fa arrow"></span></a>
@@ -146,7 +146,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="menu2.html"><i class="fa fa-sitemap fa-fw"></i> Menu 2</a>
+                            <a href="menu2.html"><i class="fa fa-list-ul fa-fw"></i> Menu 2</a>
                         </li>
                     </ul>
                 </div>
@@ -171,7 +171,7 @@
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-							<div id="station_count" style="display: relative; cursor: pointer; min-width: 290px; height: 320px; margin: 0 auto" onclick="load_iotavail();"></div>
+							<div id="station_count" style="display: relative; cursor: pointer; min-width: 290px; height: 320px; margin: 0 auto" onclick="menu1();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -185,7 +185,7 @@
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="station_type" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="load_iotavail();"></div>
+                            <div id="station_type" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -199,7 +199,7 @@
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-							<div id="openport" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="load_iotavail();"></div>
+							<div id="openport" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -259,7 +259,7 @@
 
 		<div class="page-footer">
 			<div class="text-center">
-				Copyright ⓒ 2017 Norma All rights reserved.
+				Copyright ⓒ 2020 Anna All rights reserved.
 			</div>
 		</div>
 		<!-- /#page-footer -->
@@ -768,8 +768,8 @@
     });
 	});
 
-	function load_iotavail() {
-		window.location.href="iot_avail.html";
+	function menu1() {
+		window.location.href="menu1.html";
 	}
 
 	function load_exploit_device() {
@@ -777,7 +777,7 @@
 	}
 
 	function load_log() {
-		window.location.href="network_avail.html";
+		window.location.href="menu2.html";
 	}
 
 
