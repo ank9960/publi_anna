@@ -10,21 +10,21 @@
     <title>IoTCare</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom Fonts / icon css -->
-    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- MetisMenu CSS / left navbar dropdown css -->
-    <link href="../static/css/metismenu/metisMenu.min.css" rel="stylesheet">
+    <link href="./static/css/metismenu/metisMenu.min.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
-    <link href="../static/css/custom/custom.css" rel="stylesheet">
-	
+    <link href="./static/css/custom/custom.css" rel="stylesheet">
+
 	<!-- jQuery js / knob chart를 위해 위에 있어야 함 -->
-    <script src="../static/js/jquery.min.js"></script>
-	<script src="../static/js/jquery.knob.min.js"></script>
-	
+    <script src="./static/js/jquery.min.js"></script>
+	<script src="./static/js/jquery.knob.min.js"></script>
+
 	<!-- jQuery knob chart -->
 	<script>
             $(function($) {
@@ -78,7 +78,7 @@
                             return false;
                         }
                     }
-                });                
+                });
             });
         </script>
 
@@ -101,11 +101,11 @@
 				<!-- button toggle end -->
                 <a class="navbar-brand" href="index.html">IoTCare</a>
             </div>
-            
+
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav sidebar-top" id="side-menu">
-                        
+
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
@@ -165,7 +165,7 @@
 			<!-- /.row -->
             <div class="row">
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							연결된 STATION
 						</div>
@@ -179,7 +179,7 @@
                 </div>
 				<!-- /.con-lg-6 -->
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							연결된 STATION TYPE
 						</div>
@@ -193,7 +193,7 @@
                 </div>
 				<!-- /.con-lg-6 -->
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							OPENPORT
 						</div>
@@ -207,12 +207,12 @@
                 </div>
 				<!-- /.con-lg-6 -->
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							EXPLOIT 검출된 DEVICE
 						</div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">							
+                        <div class="panel-body">
                             <div id="exploit_device" style="cursor: pointer; min-height: 280px; min-width: 290px; max-width: 600px; margin: 0 auto" onclick="load_exploit_device();"></div>
 							<button type="button" class="btn btn-info btn-align" data-toggle="modal" data-target="#exploit_modal"><i class="fa fa-bar-chart"></i></button>
                         </div>
@@ -222,7 +222,7 @@
                 </div>
 				<!-- /.con-lg-6 -->
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							WIDS SCANNER LOG
 						</div>
@@ -236,7 +236,7 @@
                 </div>
 				<!-- /.con-lg-6 -->
 				<div class="col-lg-6">
-					<div class="panel panel-default">	
+					<div class="panel panel-default">
 						<div class="panel-heading">
 							SECURITY CHECK LOG
 						</div>
@@ -269,7 +269,7 @@
 
 	<!-- Modal -->
 	<div class="modal fade" id="exploit_modal" role="dialog">
-		<div class="modal-dialog">    
+		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
@@ -288,7 +288,7 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<div class="modal fade" id="log_modal" role="dialog">
 		<div class="modal-dialog">
@@ -312,7 +312,7 @@
 		</div>
 	</div>
 	<!-- Modal end -->
-    
+
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/bootstrap.min.js"></script>
 
@@ -324,9 +324,9 @@
 
 	<!-- Highchart JavaScript -->
 	<script src="../static/js/highchart.js"></script>
-	<script src="../static/js/exporting.js"></script>	
-	
-	<!-- HighChart -->	
+	<script src="../static/js/exporting.js"></script>
+
+	<!-- HighChart -->
 	<script>
 	$(document).ready( function() {
 		var date = new Date();
@@ -335,7 +335,7 @@
 		var y = date.getFullYear();
 		document.getElementById('date').innerHTML = '<i class="fa fa-calendar-check-o"></i> Date : ' + y + '-' + m + '-' + d;
 	});
-	
+
 	Highcharts.setOptions({
     colors: ['#ff9494', '#FFFEAD', '#54f9ff', '#8fff8c', '#FEE5FF', '#FFAA87', '#41E8BF', '#ECBAFF', '#41B6E8', '#FFFEFC']
 	});
@@ -402,7 +402,7 @@
         }
     }]
 	});
-	
+
 	/* 연결된 Station Type */
 	Highcharts.chart('station_type', {
 	credits: { enabled: false },
@@ -515,7 +515,7 @@
         }]
     }]
 	});
-	
+
 	/* EXPLOIT 검출된 DEVICE */
 	Highcharts.chart('exploit_device', {
 	credits: { enabled: false },
@@ -619,7 +619,7 @@
         }]
     }]
 	});
-	
+
 	/* exploit 검출된 device 모달창 */
 	$(function () {
 	Highcharts.chart('exploit_term', {
@@ -757,7 +757,7 @@
         }
     }]
 	});
-    
+
 	var chart = $('#log_term').highcharts();
     $('#log_modal').on('show.bs.modal', function() {
         $('#log_term').css('visibility', 'hidden');
@@ -765,7 +765,7 @@
     $('#log_modal').on('shown.bs.modal', function() {
         $('#log_term').css('visibility', 'initial');
         chart.reflow();
-    });   
+    });
 	});
 
 	function load_iotavail() {
@@ -775,11 +775,11 @@
 	function load_exploit_device() {
 		window.location.href="exploit_device.html";
 	}
-	
+
 	function load_log() {
 		window.location.href="network_avail.html";
 	}
-	
+
 
 	</script>
 
