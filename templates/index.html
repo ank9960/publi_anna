@@ -167,11 +167,11 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							연결된 STATION
+              COUNTRY
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-							<div id="station_count" style="display: relative; cursor: pointer; min-width: 290px; height: 320px; margin: 0 auto" onclick="menu1();"></div>
+							<div id="country_count" style="display: relative; cursor: pointer; min-width: 290px; height: 320px; margin: 0 auto" onclick="menu1();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -181,11 +181,12 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							연결된 STATION TYPE
+							DEVICE TYPE
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="station_type" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
+                            <div id="device_type" style="cursor: pointer; min-width: 280px; height: 280px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
+                            <button type="button" class="btn btn-info btn-align" data-toggle="modal" data-target="#device_modal"><i class="fa fa-bar-chart"></i></button>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -195,11 +196,11 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							OPENPORT
+							TRIBE
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-							<div id="openport" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
+							<div id="tribe_count" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu1();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -209,12 +210,11 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							EXPLOIT 검출된 DEVICE
+							CLASS
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="exploit_device" style="cursor: pointer; min-height: 280px; min-width: 290px; max-width: 600px; margin: 0 auto" onclick="load_exploit_device();"></div>
-							<button type="button" class="btn btn-info btn-align" data-toggle="modal" data-target="#exploit_modal"><i class="fa fa-bar-chart"></i></button>
+                          <div id="class_count" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="load_class_count();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -224,11 +224,11 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							WIDS SCANNER LOG
+							LEVEL
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-							<div id="wids_log" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="load_log();"></div>
+							<div id="level" style="cursor: pointer; min-width: 290px; height: 320px; max-width: 600px; margin: 0 auto" onclick="menu2();"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -238,14 +238,14 @@
 				<div class="col-lg-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							SECURITY CHECK LOG
+							DAILY USERS
 						</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body text-center">
 							<br />
-                            <div onclick="load_log();" style="cursor: pointer;"><input class="knob" value="50" data-max="100" data-height="240" data-width="240" data-fgcolor="#ff9494" data-readonly=true style="cursor: pointer"></div>
+                            <div onclick="menu2();" style="cursor: pointer;"><input class="knob" value="380" data-max="500" data-height="240" data-width="240" data-fgcolor="#ff9494" data-readonly=true style="cursor: pointer"></div>
 							<br />
-							<div><button type="button" class="btn btn-info btn-align" data-toggle="modal" data-target="#log_modal"><i class="fa fa-bar-chart"></i></button></div>
+							<div><button type="button" class="btn btn-info btn-align" data-toggle="modal" data-target="#users_modal"><i class="fa fa-bar-chart"></i></button></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -268,18 +268,18 @@
     <!-- /#wrapper -->
 
 	<!-- Modal -->
-	<div class="modal fade" id="exploit_modal" role="dialog">
+	<div class="modal fade" id="device_modal" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">EXPLOIT 검출된 DEVICE</h4>
+					<h4 class="modal-title">DEVICE TYPE</h4>
 				</div>
 				<div class="modal-body">
 					<div class="panel panel-default" style="margin-bottom: 0px;">
 						<div class="panel-body">
-							<div id="exploit_term" style="height: 320px;"></div>
+							<div id="device_term" style="height: 320px;"></div>
 						</div>
 					</div>
 				</div>
@@ -290,18 +290,18 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="log_modal" role="dialog">
+	<div class="modal fade" id="users_modal" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">SECURITY CHECK LOG</h4>
+					<h4 class="modal-title">DAILY USERS</h4>
 				</div>
 				<div class="modal-body">
 					<div class="panel panel-default" style="margin-bottom: 0px;">
 						<div class="panel-body">
-							<div id="log_term" style="height: 320px;"></div>
+							<div id="users_term" style="height: 320px;"></div>
 						</div>
 					</div>
 				</div>
@@ -340,8 +340,8 @@
     colors: ['#ff9494', '#FFFEAD', '#54f9ff', '#8fff8c', '#FEE5FF', '#FFAA87', '#41E8BF', '#ECBAFF', '#41B6E8', '#FFFEFC']
 	});
 
-	/* 연결된 Station */
-	Highcharts.chart('station_count', {
+	/* COUNTRY */
+	Highcharts.chart('country_count', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -377,16 +377,16 @@
         name: 'count',
 		color: '#44A9A8',
         data: [
-            ['station1', 23],
-            ['station2', 16],
-            ['station3', 14],
-            ['station4', 14],
-            ['station5', 12],
-            ['station6', 12],
-            ['station7', 9],
-            ['station8', 30],
-            ['station9', 4],
-            ['station10', 35]
+            ['Korea', 100],
+            ['China', 90],
+            ['Japan', 70],
+            ['USA', 50],
+            ['Russia', 20],
+            ['Thailand', 40],
+            ['Vietnam', 30],
+            ['HongKong', 50],
+            ['Indonesia', 20],
+            ['Taiwan', 30]
         ],
         dataLabels: {
             enabled: true,
@@ -403,8 +403,8 @@
     }]
 	});
 
-	/* 연결된 Station Type */
-	Highcharts.chart('station_type', {
+	/* DEVICE TYPE */
+	Highcharts.chart('device_type', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -444,22 +444,19 @@
 		borderWidth: 3,
         data: [{
             name: 'PC',
-            y: 50
+            y: 70
         }, {
             name: 'Phone',
-            y: 20
+            y: 300
         }, {
-            name: 'iPad',
-            y: 10
-        }, {
-            name: 'AP',
-            y: 30
+            name: 'Tablet',
+            y: 130
         }]
     }]
 	});
 
-	/* Openport */
-	Highcharts.chart('openport', {
+	/* TRIBE */
+	Highcharts.chart('tribe_count', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -498,26 +495,84 @@
 		borderColor: '#236681',
 		borderWidth: 3,
         data: [{
-            name: 'port1',
-            y: 10
+            name: 'JIN',
+            y: 130
         }, {
-            name: 'port2',
-            y: 20
+            name: 'GON',
+            y: 100
         }, {
-            name: 'port3',
-            y: 50
+            name: 'KUN',
+            y: 120
         }, {
-            name: 'port4',
-            y: 30
-        }, {
-            name: 'port5',
-            y: 40
+            name: 'LYN',
+            y: 150
         }]
     }]
 	});
 
-	/* EXPLOIT 검출된 DEVICE */
-	Highcharts.chart('exploit_device', {
+	/* CLASS */
+	Highcharts.chart('class_count', {
+	credits: { enabled: false },
+	exporting: { enabled: false },
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie',
+		backgroundColor: 'transparent'
+    },
+    title: {
+        text: ''
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.y}</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+			innerSize: '20%',
+            dataLabels: {
+				distance: 10,
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.y} ({point.percentage:.0f}%)',
+                style: {
+                    color: '#fff',
+					fontSize: '13px',
+					textOutline: false
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'count',
+        colorByPoint: true,
+		borderColor: '#236681',
+		borderWidth: 3,
+        data: [{
+            name: 'Blade',
+            y: 100
+        }, {
+            name: 'Kung-Fu',
+            y: 80
+        }, {
+            name: 'Destroyer',
+            y: 70
+        }, {
+            name: 'Force',
+            y: 150
+        }, {
+            name: 'Assassin',
+            y: 40
+        }, {
+            name: 'Summoner',
+            y: 60
+        }]
+    }]
+	});
+
+	/* LEVEL */
+	Highcharts.chart('level', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -557,72 +612,20 @@
 		borderWidth: 3,
         data: [{
             name: 'LV1',
-            y: 15
+            y: 200
         }, {
             name: 'LV2',
-            y: 40
+            y: 200
         }, {
             name: 'LV3',
-            y: 45
+            y: 100
         }]
     }]
 	});
 
-	/* WIDS Scanner log */
-	Highcharts.chart('wids_log', {
-	credits: { enabled: false },
-	exporting: { enabled: false },
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie',
-		backgroundColor: 'transparent'
-    },
-    title: {
-        text: ''
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.y}</b>'
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-			innerSize: '20%',
-            dataLabels: {
-				distance: 10,
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.y} ({point.percentage:.0f}%)',
-                style: {
-                    color: '#fff',
-					fontSize: '13px',
-					textOutline: false
-                }
-            }
-        }
-    },
-    series: [{
-        name: 'count',
-        colorByPoint: true,
-		borderColor: '#236681',
-		borderWidth: 3,
-        data: [{
-            name: 'Attack A',
-            y: 40
-        }, {
-            name: 'Attack B',
-            y: 25
-        }, {
-            name: 'Attack C',
-            y: 35
-        }]
-    }]
-	});
-
-	/* exploit 검출된 device 모달창 */
+	/* DEVICE TYPE 모달창 */
 	$(function () {
-	Highcharts.chart('exploit_term', {
+	Highcharts.chart('device_term', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -633,7 +636,7 @@
         text: ''
     },
     xAxis: {
-        categories: ['0301', '0302', '0303', '0304', '0305', '0306', '0307'],
+        categories: ['0525', '0526', '0527', '0528', '0529', '0530', '0531'],
 		labels: { style: { color: '#fff' } }
     },
     yAxis: {
@@ -676,30 +679,30 @@
         }
     },
     series: [{
-        name: 'LV1',
-        data: [50, 30, 40, 70, 20, 50, 20]
+        name: 'PC',
+        data: [150, 150, 160, 100, 50, 100, 100]
     }, {
-        name: 'LV2',
-        data: [20, 20, 30, 20, 10, 30, 40]
+        name: 'Phone',
+        data: [200, 150, 160, 300, 200, 150, 130]
     }, {
-        name: 'LV3',
-        data: [30, 50, 40, 30, 70, 30, 60]
+        name: 'Tablet',
+        data: [150, 180, 170, 100, 100, 150, 200]
     }]
 	});
 
-	var chart = $('#exploit_term').highcharts();
-    $('#exploit_modal').on('show.bs.modal', function() {
-        $('#exploit_term').css('visibility', 'hidden');
+	var chart = $('#device_term').highcharts();
+    $('#device_modal').on('show.bs.modal', function() {
+        $('#device_term').css('visibility', 'hidden');
     });
-    $('#exploit_modal').on('shown.bs.modal', function() {
-        $('#exploit_term').css('visibility', 'initial');
+    $('#device_modal').on('shown.bs.modal', function() {
+        $('#device_term').css('visibility', 'initial');
         chart.reflow();
     });
 	});
 
-	/* SECURITY CHECK LOG 모달창 */
+	/* DAILY USERS 모달창 */
 	$(function () {
-    Highcharts.chart('log_term', {
+    Highcharts.chart('users_term', {
 	credits: { enabled: false },
 	exporting: { enabled: false },
     chart: {
@@ -735,13 +738,13 @@
         name: 'count',
 		color: '#44A9A8',
         data: [
-            ['0301', 23],
-            ['0302', 16],
-            ['0303', 14],
-            ['0304', 14],
-            ['0305', 12],
-            ['0306', 12],
-            ['0307', 9]
+            ['0525', 500],
+            ['0526', 480],
+            ['0527', 490],
+            ['0528', 500],
+            ['0529', 350],
+            ['0530', 400],
+            ['0531', 430]
         ],
         dataLabels: {
             enabled: true,
@@ -758,12 +761,12 @@
     }]
 	});
 
-	var chart = $('#log_term').highcharts();
-    $('#log_modal').on('show.bs.modal', function() {
-        $('#log_term').css('visibility', 'hidden');
+	var chart = $('#users_term').highcharts();
+    $('#users_modal').on('show.bs.modal', function() {
+        $('#users_term').css('visibility', 'hidden');
     });
-    $('#log_modal').on('shown.bs.modal', function() {
-        $('#log_term').css('visibility', 'initial');
+    $('#users_modal').on('shown.bs.modal', function() {
+        $('#users_term').css('visibility', 'initial');
         chart.reflow();
     });
 	});
@@ -772,11 +775,11 @@
 		window.location.href="menu1.html";
 	}
 
-	function load_exploit_device() {
-		window.location.href="exploit_device.html";
+	function load_class_count() {
+		window.location.href="sub_menu1.html";
 	}
 
-	function load_log() {
+	function menu2() {
 		window.location.href="menu2.html";
 	}
 
